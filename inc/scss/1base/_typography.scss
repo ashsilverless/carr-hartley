@@ -1,0 +1,103 @@
+/*! == TYPOGRAPHY == */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 .h5,
+.h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 $font_line-height * 0.5px;
+  font: $font_size + px / $font_line-height + px $font_secondary;
+  font-weight: 200;
+  letter-spacing: 0.03rem;
+
+  &.sub-heading {
+    font-size: $font_size * 1.1px;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.strong-lead-para {
+  p:first-of-type {
+    font-weight: 400;
+  }
+}
+
+.heading {
+  @include heading;
+  margin: 0;
+
+  &__1 {
+    font: ($font_size * 3.5) + px / ($font_line-height * 3) + px $font_primary;
+    // text-transform: uppercase;AP
+  }
+
+  &__2 {
+    font: ($font_size * 3) + px / ($font_line-height * 2.2) + px $font_primary;
+  }
+
+  &__3 {
+    font: ($font_size * 2) + px / ($font_line-height * 1.2) + px $font_primary;
+  }
+
+  &__4 {
+    font: ($font_size * 1.2) + px / ($font_line-height * 1) + px $font_primary;
+    text-transform: uppercase;
+  }
+
+  &__5 {
+    font: ($font_size * 1.7) + px / ($font_line-height * 1.5) + px $font_primary; //AP
+    font-weight: 200;
+  }
+
+  &__6 {
+    font: ($font_size * 0.85) + px / ($font_line-height * 1) + px $font_secondary;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__7 {
+    font: ($font_size * 1) + px / ($font_line-height * 1) + px $font_primary;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__8 {
+    font: ($font_size * 1) + px / ($font_line-height * 1) + px $font_primary;
+    font-weight: 200;
+  }
+
+  &.special {
+    width: 100%;
+    text-align: center;
+    background: $color_brand_main;
+    color: white;
+  }
+
+  &.body-font {
+    font-family: $font_secondary;
+  }
+
+  &.color-brand-highlight {
+    color: $color_brand_highlight;
+  }
+
+  &+p {
+    margin-top: 1rem;
+  }
+
+  &__light {
+    color: $color_grey_light;
+    padding: 0 0 2rem 0;
+  }
+}

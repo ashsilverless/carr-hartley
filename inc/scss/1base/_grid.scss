@@ -1,0 +1,196 @@
+/*=====MASTER GRID RULES=====*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr) [main-start] minmax(1rem, 80rem) [main-end] minmax(1rem, 1fr) [full-end];
+}
+
+.outer-container {
+  display: grid;
+  grid-column: main-start / main-end;
+  grid-template-columns: $sidebar-split;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 50;
+  top: 10vh;
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 80vh;
+  padding-right: 2rem;
+
+  &__bottom {
+    align-self: flex-end;
+  }
+}
+
+.container-overflow-right {
+  display: grid;
+  grid-column: main-start / full-end;
+  grid-template-columns: 15rem minmax(1rem, 65rem) minmax(0, 1fr);
+
+  .content-wrapper {
+    @include backgroundCover;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: minmax(1rem, 65rem) minmax(0, 1fr);
+
+    >.container {
+      grid-column: 1/2;
+    }
+  }
+
+  .container {
+    margin-bottom: 2rem;
+  }
+}
+
+.destinations-overflow-right {
+  grid-column: main-start/full-end;
+  // grid-template-columns: 1fr 2fr;
+  display: grid;
+}
+
+.container {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-template-columns: repeat($col-count, 1fr);
+  grid-gap: $grid-gap;
+  width: 100%;
+  max-width: 80rem;
+
+  &.grid-gap {
+    grid-gap: 2em;
+  }
+
+  &.no-gutter {
+    grid-gap: 0;
+  }
+
+  &.no-gutter-r {
+    grid-row-gap: 0;
+  }
+
+  &.no-gutter-c {
+    grid-column-gap: 0;
+  }
+
+  &.gutter-sm {
+    grid-gap: 1em;
+  }
+
+  &.align-horiz-l>.col {
+    justify-self: flex-start;
+  }
+
+  &.align-horiz-c>.col {
+    justify-self: center;
+  }
+
+  &.align-horiz-r {
+    justify-content: flex-end;
+  }
+
+  &.align-vert-t>.col {
+    align-self: flex-start;
+  }
+
+  &.align-vert-c {
+    align-items: center;
+  }
+
+  &.align-vert-b>.col {
+    align-self: flex-end;
+  }
+
+  >.col {
+    grid-column: span $col-count;
+  }
+
+  &.cols-2>.col {
+    grid-column: span 2;
+  }
+
+  &.cols-3>.col {
+    grid-column: span 3;
+  }
+
+  &.cols-4>.col {
+    grid-column: span 4;
+  }
+
+  &.cols-6>.col {
+    grid-column: span 6;
+  }
+
+  &.cols-12>.col {
+    grid-column: span 12;
+  }
+}
+
+.container {
+  >.col {
+    position: relative;
+    width: 100%;
+  }
+
+  >.col {
+    &.align-horiz-l {
+      justify-self: flex-start;
+    }
+
+    &.align-horiz-c {
+      justify-self: center;
+    }
+
+    &.align-horiz-r {
+      justify-self: flex-end;
+    }
+
+    &.align-vert-t {
+      align-self: flex-start;
+    }
+
+    &.align-vert-c {
+      align-self: center;
+    }
+
+    &.align-vert-b {
+      align-self: flex-end;
+    }
+  }
+}
+
+/*=====PROJECT GRID RULES=====*/
+
+.container {
+  &.cols-2-8-2 {
+    .col:nth-of-type(3n - 2) {
+      grid-column: span 2;
+    }
+
+    .col:nth-of-type(3n - 1) {
+      grid-column: span 8;
+    }
+
+    .col:nth-of-type(3n) {
+      grid-column: span 2;
+    }
+  }
+}
+
+/*===========MEDIA QUERIES==========*/
+
+@each $name,
+$size in $breakpoints {
+  @media (max-width: #{$size}) {
+    @for $i from 1 through $col-count {
+      .container.cols-#{$name}-#{$i}>.col {
+        grid-column: span $i;
+      }
+    }
+  }
+}

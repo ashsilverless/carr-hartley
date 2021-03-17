@@ -1,0 +1,24 @@
+/* === Global SASS File === //
+Handles import of all Sass and partials, outputting as style.css
+!
+Theme Name: Carr Hartley
+Author: Silverless
+Author URI: https://silverless.co.uk/
+Version: 1.0
+*/
+/* === 1 - Base ===*/
+@import "inc/scss/1base/variables.scss";
+@import "inc/scss/1base/mixins";
+@import "inc/scss/1base/grid.scss";
+@import "inc/scss/1base/global.scss";
+@import "inc/scss/1base/typography.scss";
+/* === 2 - Atomic ===*/
+@import "inc/scss/2atomic/atoms.scss";
+@import "inc/scss/2atomic/molecules.scss";
+@import "inc/scss/2atomic/organisms.scss";
+@import "inc/scss/2atomic/pages.scss";
+/* === 3 - Vendor ===*/
+@import "inc/scss/3vendor/vendor.scss";
+/* === 4 - Modifiers ===*/
+@import "inc/scss/4modifiers/modifiers.scss";
+@import "inc/scss/4modifiers/media-queries.scss";

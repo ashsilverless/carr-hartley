@@ -1,0 +1,669 @@
+/*! == PAGES == */
+
+/*=== Positioning Page Elements===*/
+
+.cta-contact-header {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  text-align: right;
+
+  .button {
+    z-index: 100;
+    background: #f7f3f2;
+    opacity: 0.8;
+  }
+
+  a {
+    color: #707070;
+
+    &:hover {
+      color: $color_grey_dark;
+    }
+  }
+
+  svg {
+    max-width: 24px;
+
+    path {
+      fill: #707070;
+      opacity: 1;
+    }
+  }
+}
+
+main {
+  padding-top: 10vh;
+}
+
+.single-work {
+  .quote {
+    grid-column: 5/13;
+  }
+}
+
+.page-template-legal {
+  .content {
+    .heading {
+      grid-column: 5/12;
+      color: $color_grey_light;
+    }
+  }
+
+  .sub-menu {
+    border-top: 1px solid $color_grey_light;
+    padding-top: 1rem;
+  }
+}
+
+.destinations-content-wrapper {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  margin-right: -80rem;
+  padding-right: 80rem;
+
+  .news-feed__item {
+    .image {
+      height: 9rem;
+    }
+  }
+}
+
+.map-content-wrapper {
+  grid-template-columns: 15rem minmax(1rem, 50rem) minmax(0, 1fr);
+  display: grid;
+  grid-column: 2;
+}
+
+.destinations-wrapper {
+  grid-column: 5/13;
+}
+
+.destination-copy {
+  grid-column: span 12;
+
+  .dark-highlight {
+    width: 18rem;
+    margin: 0.5rem 0;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.sidebar-quote {
+  padding-left: 2rem;
+
+  svg {
+    position: absolute;
+    left: -1rem;
+    width: 2rem;
+
+    path {
+      fill: $color_grey_light;
+    }
+  }
+}
+
+.sidebar-map {
+  img {
+    width: 100%;
+  }
+
+  .cls-1,
+  .cls-2 {
+    fill: white;
+  }
+}
+
+.cls-1 path {
+  fill: white;
+}
+
+.first-page-nav {
+  position: absolute;
+  bottom: 1rem;
+
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    path {
+      fill: $color_grey_lightest;
+    }
+  }
+}
+
+.lead-content .arrow {
+  transform: rotate(90deg);
+}
+
+.offset-fix {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.single-safari {
+  display: grid;
+  grid-column: 2/3;
+  margin-bottom: 2rem;
+}
+
+.safari-content,
+.safari-copy {
+  grid-column: 5/13;
+
+  p:last-of-type {
+    margin-bottom: 3rem;
+  }
+}
+
+.w3-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+  .tablink {
+    padding: 1.5rem 0 1rem 0;
+    margin: 0 0.5rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+    background: $color_grey_lightest;
+    text-transform: uppercase;
+    font-family: $font_primary;
+  }
+
+  a {
+    color: $color_grey_controls;
+  }
+}
+
+.w2-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+
+  .tablink {
+    padding: 1.5rem 0 1rem 0;
+    margin: 0 0.5rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+    background: $color_grey_lightest;
+    text-transform: uppercase;
+    font-family: $font_primary;
+  }
+
+  a {
+    color: $color_grey_controls;
+  }
+}
+
+.tabcontent {
+  transition: ease-in 2s;
+  display: none;
+}
+
+#tabs-wrapper {
+  grid-column: 2 / 3;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style: none;
+
+    width: 100%;
+    text-align: center;
+    margin-right: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .active {
+    border-radius: 1rem 1rem 0 0;
+    background: #f7f3f2;
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem 0 0;
+  }
+}
+
+#different,
+#team,
+#conservation {
+  border-radius: 0 0 0 1rem;
+}
+
+#heritage,
+#different,
+#team,
+#community,
+#conservation {
+  padding-bottom: 5rem;
+}
+
+.region-map {
+  grid-column: 2/4;
+  // padding: 0 2rem;
+
+  svg {
+    max-height: 8rem;
+  }
+}
+
+.region-title {
+  grid-column: 7/13;
+
+  P {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.active .region-title p {
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.region-copy {
+  grid-column: 5/13;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.country-feed {
+  display: grid;
+  grid-column: 5/13;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  max-height: 0;
+  overflow: hidden;
+
+  .news-feed__item {
+    .image {
+      height: 9rem;
+      min-height: 9rem;
+    }
+  }
+
+  .button__arrowright svg {
+    padding-left: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.country-feed,
+.news-feed__item,
+.toggle-list,
+.other-safari,
+.leaders,
+.work-leaders,
+.itin-block {
+  .button__arrowright svg {
+    padding-left: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.news-feed__item {
+  .button__arrowright svg {
+    padding-left: 1rem;
+  }
+}
+.country-feed {
+  .news-feed__item {
+    .button__arrowright svg {
+      padding-left: 0;
+    }
+  }
+}
+
+.active .region-map {
+  grid-column: 1/5;
+  grid-row: 1/3;
+  transition: all 1s ease;
+
+  svg {
+    max-height: 15rem;
+    transition: all 0.5s linear;
+  }
+}
+
+.active .country-feed {
+  display: grid;
+  max-height: 50rem;
+  transition: all 0.5s linear;
+}
+
+.itin-outer {
+  padding-left: 2rem;
+  display: grid;
+  grid-column: 2/3;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 5rem;
+}
+
+.itin-block {
+  grid-column: span 6;
+
+  .image {
+    @include content-col;
+    @include backgroundCover;
+    @include emphasisShadow;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    min-height: 15rem;
+  }
+}
+
+.accordion-wrapper {
+  grid-column: 5/13;
+}
+
+.accordion {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 1.2rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem 1rem 0 0;
+
+  &.active,
+  .accordion:hover,
+  button:focus {
+    background-color: #ccc;
+    background: #eee;
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  grid-column: 5/13;
+  border-radius: 0 0 1rem 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    border-radius: 0 0 1rem 1rem;
+
+    svg {
+      padding-right: 1.2rem;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  p {
+    padding: 1rem 2rem;
+  }
+}
+
+.itin-copy {
+  grid-column: 5/11;
+}
+
+.accordion-inner {
+  // @include backgroundCover;
+  @include emphasisShadow;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+  button {
+    border-radius: 1rem;
+  }
+}
+
+.single .news-fix {
+  margin-top: -10vh;
+
+  .content-wrapper {
+    border-radius: 0 0 0 1rem;
+  }
+}
+
+.tab-copy {
+  grid-column: 5/13;
+}
+
+.gallery-captions {
+  grid-column: 2/5;
+
+  .heading {
+    font-weight: 400;
+  }
+
+  ol {
+    padding: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 0.9em;
+
+  }
+
+  svg {
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    right: 0.5rem;
+
+    path {
+      fill: $color_grey_light;
+    }
+  }
+}
+
+#east,
+#southern,
+#central,
+#ocean {
+  #countries path {
+    fill: white;
+  }
+}
+
+#east {
+  #countries {
+    #eastafrica path {
+      fill: #454545;
+    }
+  }
+}
+
+#southern {
+  #countries {
+    #southernafrica path {
+      fill: #454545;
+    }
+  }
+}
+
+#central {
+  #countries {
+    #centralwest path {
+      fill: #454545;
+    }
+  }
+}
+
+#ocean {
+  #countries {
+    #indianocean path {
+      fill: #454545;
+    }
+  }
+}
+
+.single-safari {
+  .other-safari {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    padding: 0 0 0 1rem;
+
+    .image {
+      min-height: 20rem;
+    }
+  }
+}
+
+.active .top-bar .scroll-arrow {
+  padding: 0;
+}
+
+.days-count {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.country-tag {
+  display: block;
+  font-family: $font_secondary;
+}
+
+.accordion-outer {
+  grid-column-end: 13;
+}
+
+.info-accordion {
+  background-color: $color_grey_dark;
+  color: white;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  align-items: center;
+  font: ($font_size * 1.05) + px / ($font_line-height * 1) + px $font_secondary;
+  text-transform: uppercase;
+
+  .auto-counter {
+    font: ($font_size * 1) + px / ($font_line-height * 1) + px $font_secondary;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    justify-self: flex-end;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+.text-content .info-active {
+  margin-bottom: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  svg {
+    transform: rotate(270deg);
+  }
+
+
+
+}
+
+
+.info-panel {
+  padding: 0 1rem;
+  background-color: $color_grey_lightest;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.download-file {
+  display: grid;
+  padding: 1rem;
+  background: $color_grey_lightest;
+  grid-column-end: 13;
+  border-radius: 0.5rem;
+
+  .sub-heading {
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  .download-link {
+    font-weight: 200;
+    font-size: $font_size * 0.9px;
+    display: flex;
+    color: $color_brand_highlight;
+
+    .download-text {
+      padding-left: 1rem;
+      font-weight: 400;
+    }
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+
+      path {
+        fill: $color_brand_highlight;
+      }
+    }
+  }
+}
+
+.page-id-1565 .sub-menu {
+  display: none;
+}
