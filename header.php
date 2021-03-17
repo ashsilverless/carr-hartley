@@ -8,7 +8,7 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php $blog_title = get_bloginfo(); ?></title>
+    <title><?php $blog_title = get_bloginfo(); echo $blog_title;?></title>
 
     <link rel="stylesheet" href="https://use.typekit.net/ibi2glu.css">
     <!--TYPEKIT INJECT-->

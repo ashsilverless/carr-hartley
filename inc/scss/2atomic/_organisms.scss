@@ -20,8 +20,8 @@
   }
 
   ul {
-    display: flex;
-    // align-items:flex-end;AP
+    display: grid;
+    grid-template-columns: repeat(5, auto);
     justify-content: space-between;
     margin: 0;
 
@@ -44,7 +44,7 @@
         text-decoration: none;
         color: $color_grey_mid;
         cursor: pointer;
-
+        white-space: nowrap;
         &:hover {
           color: $color_brand_highlight;
         }
@@ -84,7 +84,7 @@
 
     a {
       font-family: $font_primary;
-      font-size: $font_size * 1.075px;
+      font-size: $font_size * 1px;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
     }
